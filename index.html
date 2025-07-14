@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yeonhee Choi Portfolio</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      margin: 40px;
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+    
+    h1, h2, h3 {
+      font-weight: bold;
+    }
+    
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #000;
+      padding-bottom: 10px;
+    }
+    
+    h2 {
+      font-size: 1.8em;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    
+    h3 {
+      font-size: 1.4em;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .project-section {
+      border-top: 1px solid #000;
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+    
+    img, video {
+      max-width: 100%;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    a {
+      color: black;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: #666;
+    }
+    
+    .contact-info {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f8f8f8;
+      border-left: 4px solid #000;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .skill-tag {
+      background-color: #000;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    
+    .project-item {
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+    
+    .project-item h3 {
+      margin-top: 0;
+      color: #000;
+    }
+    
+    .project-item ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    
+    .project-item li {
+      margin-bottom: 5px;
+    }
+    
+    .intro-section {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    
+    .intro-section p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+    
+    /* 반응형 디자인 */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 2em;
+      }
+      
+      h2 {
+        font-size: 1.5em;
+      }
+      
+      .skills {
+        justify-content: center;
+      }
+      
+      .project-item {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Yeonhee Choi Portfolio</h1>
+
+  <section class="intro-section">
+    <h2>Personal Introduction</h2>
+    <p>Yeonhee Choi is a practice-based researcher, designer, and interdisciplinary artist exploring the intersection of neurodiversity, complex trauma, and embodied experience. Her work investigates pathways to post-trauma recovery and empowerment through trauma-informed, inclusive design.</p>
+    
+    <p>With expertise in XR technologies, interaction design, and trauma-informed research methodologies, I create immersive experiences that promote healing, understanding, and empowerment for diverse communities.</p>
+  </section>
+
+  <section>
+    <h2>Roles & Responsibilities</h2>
+    <p>This is a solo project. I was responsible for the entire creative and technical process, including concept development, XR design and development, trauma-informed research, visual and interaction design, and final presentation.</p>
+  </section>
+
+  <section>
+    <h2>Skills & Expertise</h2>
+    <div class="skills">
+      <span class="skill-tag">Unity Development</span>
+      <span class="skill-tag">AR/VR Design</span>
+      <span class="skill-tag">C# Programming</span>
+      <span class="skill-tag">Interaction Design</span>
+      <span class="skill-tag">Trauma-Informed Design</span>
+      <span class="skill-tag">Research</span>
+      <span class="skill-tag">UX/UI Design</span>
+      <span class="skill-tag">3D Modeling</span>
+      <span class="skill-tag">Creative Coding</span>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h2>Featured Projects</h2>
+    
+    <div class="project-item">
+      <h3>AR Pet Interaction System</h3>
+      <p>An augmented reality application that uses dual marker tracking to create interactive experiences with virtual pets. The system recognizes bottle and hand markers to enable petting interactions, demonstrating advanced AR tracking capabilities and user experience design.</p>
+      
+      <h4>Technical Features:</h4>
+      <ul>
+        <li>Dual marker tracking system using AR Foundation</li>
+        <li>Proximity-based interaction detection</li>
+        <li>State management for pet behaviors (sleeping/awake states)</li>
+        <li>Cooldown system for natural interaction flow</li>
+        <li>Real-time sprite switching based on interaction</li>
+        <li>3D positioning and scaling relative to marker size</li>
+      </ul>
+      
+      <h4>Technologies Used:</h4>
+      <p>Unity, AR Foundation, C#, ARCore/ARKit, Computer Vision</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Trauma-Informed Interactive Experiences</h3>
+      <p>Research and design of interactive systems that support individuals with complex trauma and neurodivergent experiences. Focus on creating safe, empowering digital spaces that promote healing and self-discovery.</p>
+      
+      <h4>Key Contributions:</h4>
+      <ul>
+        <li>Development of trauma-informed design principles for XR</li>
+        <li>User research with vulnerable populations</li>
+        <li>Accessibility considerations for neurodivergent users</li>
+        <li>Ethical framework for therapeutic technology design</li>
+      </ul>
+      
+      <h4>Impact:</h4>
+      <p>Research findings contributed to understanding of how immersive technologies can support post-trauma recovery and empowerment.</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Embodied Experience Design</h3>
+      <p>Exploration of how physical and digital interactions can create meaningful embodied experiences, particularly for individuals navigating complex trauma and neurodiversity.</p>
+      
+      <h4>Research Areas:</h4>
+      <ul>
+        <li>Somatic approaches to interaction design</li>
+        <li>Haptic feedback systems</li>
+        <li>Inclusive design methodologies</li>
+        <li>Cross-cultural trauma-informed practices</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h2>Research & Publications</h2>
+    <div class="project-item">
+      <h3>Ongoing Research</h3>
+      <p>Currently investigating the intersection of neurodiversity, trauma, and embodied experience through practice-based research methodologies.</p>
+      
+      <h4>Research Focus:</h4>
+      <ul>
+        <li>Post-trauma recovery pathways</li>
+        <li>Neurodivergent-centered design</li>
+        <li>Embodied cognition in digital spaces</li>
+        <li>Inclusive XR development practices</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact-info">
+    <h2>Contact Information</h2>
+    <p><strong>Email:</strong> ychoi003@gold.ac.uk</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yeonhee-c-10a000135" target="_blank">Your LinkedIn Profile</a></p>
+    <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4506-5302" target="_blank">Your GitHub Profile</a></p>
+    <!--<p><strong>Instagram:</strong> Available for remote collaboration worldwide</p>-->
+  </section>
+
+  <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666;">
+    <p>&copy; 2024 Yeonhee Choi. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
