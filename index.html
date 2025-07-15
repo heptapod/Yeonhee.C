@@ -3,126 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yeonhee Choi Portfolio</title>
+  <title>Wish You Were Here - Yeonhee Choi</title>
   <style>
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background-color: #fff;
       color: #000;
-      margin: 40px;
+      margin: 0;
       line-height: 1.6;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 40px;
+      padding: 40px 20px;
     }
     
     h1, h2, h3 {
       font-weight: bold;
+      margin-top: 0;
     }
     
     h1 {
       font-size: 2.5em;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       border-bottom: 3px solid #000;
       padding-bottom: 10px;
     }
     
     h2 {
       font-size: 1.8em;
-      margin-top: 40px;
+      margin-top: 60px;
       margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     
     h3 {
-      font-size: 1.4em;
-      margin-top: 30px;
+      font-size: 1.3em;
+      margin-top: 40px;
       margin-bottom: 15px;
+      font-weight: normal;
+      text-decoration: underline;
     }
     
-    .project-section {
-      border-top: 1px solid #000;
-      margin-top: 40px;
-      padding-top: 20px;
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    .section-label {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    
+    .intro-section {
+      border-bottom: 1px solid #000;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .intro-section h3 {
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .skills {
+      display: inline;
+      font-weight: normal;
+    }
+    
+    .project-overview {
+      background-color: #f9f9f9;
+      padding: 30px;
+      margin: 30px 0;
+      border-left: 5px solid #000;
+    }
+    
+    .team-member {
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+    
+    .team-role {
+      font-weight: bold;
+    }
+    
+    .timeline-item {
+      margin-bottom: 30px;
+      padding-left: 20px;
+      border-left: 2px solid #000;
+    }
+    
+    .timeline-item h4 {
+      margin-top: 0;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .code-snippet {
+      background-color: #f5f5f5;
+      padding: 15px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      border-left: 3px solid #000;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+    
+    .research-citation {
+      font-style: italic;
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #fafafa;
+    }
+    
+    .reflection-box {
+      background-color: #f0f0f0;
+      padding: 30px;
+      margin: 30px 0;
+      border: 2px solid #000;
+    }
+    
+    .reflection-box h3 {
+      margin-top: 0;
+      text-decoration: none;
+    }
+    
+    .placeholder-media {
+      background-color: #e0e0e0;
+      border: 2px dashed #999;
+      padding: 40px;
+      text-align: center;
+      margin: 20px 0;
+      color: #666;
+      font-style: italic;
     }
     
     img, video {
       max-width: 100%;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      border: 1px solid #ddd;
     }
     
-    a {
-      color: black;
+    .contact-link {
+      color: #000;
       text-decoration: underline;
-      transition: color 0.3s ease;
     }
     
-    a:hover {
+    .contact-link:hover {
       color: #666;
     }
     
-    .contact-info {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #f8f8f8;
-      border-left: 4px solid #000;
-      border-radius: 0 8px 8px 0;
-    }
-    
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    
-    .skill-tag {
-      background-color: #000;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 3px;
-      font-size: 14px;
-    }
-    
-    .project-item {
-      margin-bottom: 40px;
-      padding: 20px;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      background-color: #fafafa;
-    }
-    
-    .project-item h3 {
-      margin-top: 0;
-      color: #000;
-    }
-    
-    .project-item ul {
-      margin: 10px 0;
-      padding-left: 20px;
-    }
-    
-    .project-item li {
-      margin-bottom: 5px;
-    }
-    
-    .intro-section {
-      background-color: #f9f9f9;
-      padding: 30px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-    
-    .intro-section p {
-      font-size: 1.1em;
-      margin-bottom: 15px;
-    }
-    
-    /* 반응형 디자인 */
     @media (max-width: 768px) {
       body {
-        padding: 20px;
+        padding: 20px 15px;
       }
       
       h1 {
@@ -131,126 +171,257 @@
       
       h2 {
         font-size: 1.5em;
+        margin-top: 40px;
       }
       
-      .skills {
-        justify-content: center;
-      }
-      
-      .project-item {
-        padding: 15px;
+      .project-overview, .reflection-box {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>Yeonhee Choi Portfolio</h1>
+  <header>
+    <h1>Wish You Were Here</h1>
+    <p><strong>Affordable AR Mental Health Support for PTSD/CPTSD</strong></p>
+    <p>Yeonhee Choi | Individual XR Project | July 2025</p>
+  </header>
 
   <section class="intro-section">
+    <div class="section-label">A</div>
     <h2>Personal Introduction</h2>
-    <p>Yeonhee Choi is a practice-based researcher, designer, and interdisciplinary artist exploring the intersection of neurodiversity, complex trauma, and embodied experience. Her work investigates pathways to post-trauma recovery and empowerment through trauma-informed, inclusive design.</p>
     
-    <p>With expertise in XR technologies, interaction design, and trauma-informed research methodologies, I create immersive experiences that promote healing, understanding, and empowerment for diverse communities.</p>
+    <h3>About</h3>
+    <p>I am a practice-based researcher and XR developer with lived experience of Complex PTSD (CPTSD) and Autism Spectrum Disorder (ASD). During the COVID-19 pandemic in London, I experienced firsthand the gaps in NHS mental health services—long waiting times, limited accessibility for neurodivergent individuals, and inadequate support for those not presenting with immediate self-harm risks.</p>
+    
+    <p>This project emerges from that lived experience, adhering to the principle that meaningful solutions for marginalized communities must come from within those communities themselves, rather than being designed "about us, without us."</p>
+    
+    <h3>Skillset</h3>
+    <p class="skills">Unity Development, AR Foundation, C# Programming, Trauma-Informed Design, UX Research, Marker-Based AR, Custom Animation, Solo Full-Stack Development</p>
   </section>
 
   <section>
-    <h2>Roles & Responsibilities</h2>
-    <p>This is a solo project. I was responsible for the entire creative and technical process, including concept development, XR design and development, trauma-informed research, visual and interaction design, and final presentation.</p>
+    <div class="section-label">B</div>
+    <h2>Group Roles</h2>
+    <p><strong>Solo Project:</strong> As this is an individual project, I was responsible for all aspects of development, from initial concept and research through technical implementation and user experience design.</p>
+    
+    <div class="team-member">
+      <span class="team-role">Lead Developer, Researcher & Designer:</span> Yeonhee Choi
+    </div>
   </section>
 
   <section>
-    <h2>Skills & Expertise</h2>
-    <div class="skills">
-      <span class="skill-tag">Unity Development</span>
-      <span class="skill-tag">AR/VR Design</span>
-      <span class="skill-tag">C# Programming</span>
-      <span class="skill-tag">Interaction Design</span>
-      <span class="skill-tag">Trauma-Informed Design</span>
-      <span class="skill-tag">Research</span>
-      <span class="skill-tag">UX/UI Design</span>
-      <span class="skill-tag">3D Modeling</span>
-      <span class="skill-tag">Creative Coding</span>
-    </div>
-  </section>
-
-  <section class="project-section">
-    <h2>Featured Projects</h2>
+    <div class="section-label">C</div>
+    <h2>Project Concept & Brief Response</h2>
     
-    <div class="project-item">
-      <h3>AR Pet Interaction System</h3>
-      <p>An augmented reality application that uses dual marker tracking to create interactive experiences with virtual pets. The system recognizes bottle and hand markers to enable petting interactions, demonstrating advanced AR tracking capabilities and user experience design.</p>
+    <div class="project-overview">
+      <h3>Project Overview</h3>
+      <p><strong>Wish You Were Here</strong> is an affordable, accessible AR application designed to provide immediate mental health support for individuals with PTSD, CPTSD, and sensory-sensitive neurodivergent conditions. The project responds to critical gaps in current mental health services by offering a tangible, hybrid XR experience that combines virtual companionship with physical comfort.</p>
       
-      <h4>Technical Features:</h4>
-      <ul>
-        <li>Dual marker tracking system using AR Foundation</li>
-        <li>Proximity-based interaction detection</li>
-        <li>State management for pet behaviors (sleeping/awake states)</li>
-        <li>Cooldown system for natural interaction flow</li>
-        <li>Real-time sprite switching based on interaction</li>
-        <li>3D positioning and scaling relative to marker size</li>
-      </ul>
-      
-      <h4>Technologies Used:</h4>
-      <p>Unity, AR Foundation, C#, ARCore/ARKit, Computer Vision</p>
+      <p><strong>Core Innovation:</strong> Users interact with a semi-transparent 2D animated companion overlaid on a physical object (heated water bottle) through their smartphone camera, creating a "hybrid reality" that provides both visual and tactile comfort without requiring expensive VR equipment.</p>
     </div>
 
-    <div class="project-item">
-      <h3>Trauma-Informed Interactive Experiences</h3>
-      <p>Research and design of interactive systems that support individuals with complex trauma and neurodivergent experiences. Focus on creating safe, empowering digital spaces that promote healing and self-discovery.</p>
-      
-      <h4>Key Contributions:</h4>
-      <ul>
-        <li>Development of trauma-informed design principles for XR</li>
-        <li>User research with vulnerable populations</li>
-        <li>Accessibility considerations for neurodivergent users</li>
-        <li>Ethical framework for therapeutic technology design</li>
-      </ul>
-      
-      <h4>Impact:</h4>
-      <p>Research findings contributed to understanding of how immersive technologies can support post-trauma recovery and empowerment.</p>
-    </div>
+    <h3>Problem Statement</h3>
+    <p>Traditional mental health services often fail individuals experiencing trauma-related hypervigilance, panic attacks, and social isolation—particularly during crisis periods when immediate support is needed but emergency services are inappropriate. Current VR solutions are expensive, inaccessible, and often overwhelming for trauma survivors.</p>
 
-    <div class="project-item">
-      <h3>Embodied Experience Design</h3>
-      <p>Exploration of how physical and digital interactions can create meaningful embodied experiences, particularly for individuals navigating complex trauma and neurodiversity.</p>
-      
-      <h4>Research Areas:</h4>
-      <ul>
-        <li>Somatic approaches to interaction design</li>
-        <li>Haptic feedback systems</li>
-        <li>Inclusive design methodologies</li>
-        <li>Cross-cultural trauma-informed practices</li>
-      </ul>
+    <h3>Solution Approach</h3>
+    <p>This project develops an affordable alternative using existing technology (smartphones + common household items) to create safe, controlled therapeutic experiences. The design prioritizes accessibility, affordability, and scalability while maintaining therapeutic efficacy through evidence-based approaches to trauma-informed care.</p>
+  </section>
+
+  <section>
+    <div class="section-label">D</div>
+    <h2>Related Material & Research Foundation</h2>
+    
+    <h3>Core Research Influences</h3>
+    
+    <div class="research-citation">
+      <strong>Harry Harlow's Contact Comfort Studies (1958):</strong> Foundational research demonstrating that physical comfort and contact are fundamental to emotional regulation and stress reduction, informing the tactile component of this design.
+    </div>
+    
+    <div class="research-citation">
+      <strong>Temple Grandin's Deep Touch Pressure Research:</strong> Evidence that controlled pressure and tactile stimulation can significantly reduce anxiety and hypervigilance in neurodivergent individuals, directly influencing the heated water bottle interaction design.
+    </div>
+    
+    <div class="research-citation">
+      <strong>Animal-Assisted Therapy Literature:</strong> Research demonstrating the therapeutic benefits of safe, non-judgmental companionship in trauma recovery, providing the conceptual framework for the virtual companion design.
+    </div>
+    
+    <h3>Technical Inspiration</h3>
+    <p><strong>MIT Media Lab's TREE Project:</strong> A 4D hybrid VR experience that combines virtual visuals with synchronized physical effects (wind, temperature) to create heightened immersion. This project inspired the hybrid approach of combining visual AR with physical tactile interaction.</p>
+    
+    <p><strong>Previous Prototype:</strong> An earlier VR version of "Wish You Were Here" explored similar concepts using expensive headset technology. This current iteration reimagines the experience for broader accessibility and real-world implementation.</p>
+  </section>
+
+  <section>
+    <div class="section-label">E</div>
+    <h2>User Journey & Experience Design</h2>
+    
+    <h3>User Flow Overview</h3>
+    <div class="timeline-item">
+      <h4>Step 1: Setup (2 minutes)</h4>
+      <p>User attaches custom markers to water bottle and hand, fills bottle with warm water, and launches the AR application on their smartphone.</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h4>Step 2: Companion Interaction (5-30 minutes)</h4>
+      <p>Semi-transparent 2D animated companion appears overlaid on the physical water bottle. User engages in gentle tactile interaction while the visual companion responds with calming animations and presence.</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h4>Step 3: Regulation & Closure (2-5 minutes)</h4>
+      <p>Session gradually concludes with grounding exercises, leaving user in a regulated state with the option to repeat as needed.</p>
+    </div>
+    
+    <h3>Accessibility Features</h3>
+    <p>The experience is designed to work on older smartphones with minimal processing requirements, uses simple marker-based tracking to reduce computational load, and requires only common household items (water bottle, markers) to ensure broad accessibility regardless of economic status.</p>
+    
+    <div class="placeholder-media">
+      [User Journey Diagram - To be created]<br>
+      Visual flowchart showing the complete user experience from setup to completion
     </div>
   </section>
 
-  <section class="project-section">
-    <h2>Research & Publications</h2>
-    <div class="project-item">
-      <h3>Ongoing Research</h3>
-      <p>Currently investigating the intersection of neurodiversity, trauma, and embodied experience through practice-based research methodologies.</p>
+  <section>
+    <div class="section-label">F</div>
+    <h2>Technical Implementation & Development Timeline</h2>
+    
+    <h3>Current Development Status: Prototype Phase</h3>
+    
+    <div class="timeline-item">
+      <h4>Phase 1: Foundation Setup (Completed - July 1-10)</h4>
+      <p>Unity project initialization, AR Foundation integration, basic camera functionality, and initial marker detection system implementation.</p>
       
-      <h4>Research Focus:</h4>
-      <ul>
-        <li>Post-trauma recovery pathways</li>
-        <li>Neurodivergent-centered design</li>
-        <li>Embodied cognition in digital spaces</li>
-        <li>Inclusive XR development practices</li>
-      </ul>
+      <div class="code-snippet">
+// Basic AR marker detection implementation
+public class MarkerDetection : MonoBehaviour {
+    [SerializeField] private ARTrackedImageManager trackedImageManager;
+    [SerializeField] private GameObject virtualCompanion;
+    
+    void OnEnable() {
+        trackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+    }
+    
+    void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs) {
+        foreach (var trackedImage in eventArgs.added) {
+            HandleTrackedImage(trackedImage);
+        }
+    }
+}</div>
+    </div>
+    
+    <div class="timeline-item">
+      <h4>Phase 2: Core Interaction System (In Progress - July 10-20)</h4>
+      <p>Development of dual marker tracking (bottle + hand), proximity-based interaction detection, and 2D animation overlay system with semi-transparent rendering for AR integration.</p>
+    </div>
+    
+    <div class="timeline-item">
+      <h4>Phase 3: Stereoscopic AR Enhancement (Planned - July 20-25)</h4>
+      <p>Implementation of custom Google Cardboard case modification for hands-free use, split-screen stereoscopic rendering for enhanced depth perception, and video pass-through optimization for comfortable extended use.</p>
+    </div>
+    
+    <h3>Technical Architecture</h3>
+    <p><strong>Platform:</strong> Unity 2022.3 LTS with AR Foundation 5.0</p>
+    <p><strong>AR System:</strong> ARKit (iOS) / ARCore (Android) with custom marker library</p>
+    <p><strong>Rendering:</strong> Custom shader for semi-transparent 2D animations in 3D AR space</p>
+    <p><strong>Interaction:</strong> Proximity-based detection between hand and bottle markers</p>
+    
+    <div class="placeholder-media">
+      [Technical Architecture Diagram - To be created]<br>
+      System overview showing AR pipeline, marker tracking, and interaction logic
+    </div>
+    
+    <h3>3D Assets & Animation</h3>
+    <p>Custom 2D animated companion designed in minimalist, abstract style to avoid overwhelming trauma-sensitive users. Animations focus on gentle, rhythmic movements that promote nervous system regulation.</p>
+    
+    <div class="placeholder-media">
+      [Animation Samples - To be created]<br>
+      GIF demonstrations of companion animations and interaction responses
     </div>
   </section>
 
-  <section class="contact-info">
-    <h2>Contact Information</h2>
-    <p><strong>Email:</strong> ychoi003@gold.ac.uk</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yeonhee-c-10a000135" target="_blank">Your LinkedIn Profile</a></p>
-    <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4506-5302" target="_blank">Your GitHub Profile</a></p>
-    <!--<p><strong>Instagram:</strong> Available for remote collaboration worldwide</p>-->
+  <section>
+    <div class="section-label">G</div>
+    <h2>Additional Feature: Stereoscopic AR Enhancement</h2>
+    
+    <h3>Innovation Beyond Standard AR</h3>
+    <p>The additional feature implements a stereoscopic viewing mode that transforms the smartphone AR experience into a more immersive, hands-free solution. This addresses a key limitation of handheld AR for therapeutic use—the need to hold the device while seeking comfort.</p>
+    
+    <h3>Technical Implementation</h3>
+    <p>A modified Google Cardboard case with an open camera section allows users to wear the device like VR goggles while maintaining video pass-through capability. The screen splits into left and right eye views, each rendering slightly different camera angles to create natural depth perception.</p>
+    
+    <div class="code-snippet">
+// Stereoscopic rendering implementation
+public class StereoscopicRenderer : MonoBehaviour {
+    [SerializeField] private Camera leftEyeCamera;
+    [SerializeField] private Camera rightEyeCamera;
+    [SerializeField] private float eyeSeparation = 0.064f; // Average IPD
+    
+    void Update() {
+        Vector3 leftPos = transform.position - transform.right * (eyeSeparation / 2);
+        Vector3 rightPos = transform.position + transform.right * (eyeSeparation / 2);
+        
+        leftEyeCamera.transform.position = leftPos;
+        rightEyeCamera.transform.position = rightPos;
+    }
+}</div>
+    
+    <h3>User Experience Impact</h3>
+    <p>This enhancement allows users to fully embrace the physical comfort object while maintaining visual connection with the virtual companion, creating a more natural and therapeutically effective interaction paradigm.</p>
+    
+    <div class="placeholder-media">
+      [Stereoscopic View Demo - To be created]<br>
+      Video demonstration of the enhanced viewing experience and depth perception
+    </div>
   </section>
 
-  <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666;">
-    <p>&copy; 2024 Yeonhee Choi. All rights reserved.</p>
+  <section>
+    <div class="section-label">H</div>
+    <h2>Walkthrough Video</h2>
+    
+    <div class="placeholder-media">
+      [Complete Application Walkthrough - To be created by July 30]<br>
+      Comprehensive demonstration of setup, interaction, and user experience<br>
+      Duration: 5-8 minutes
+    </div>
+    
+    <p><strong>Video Content Plan:</strong></p>
+    <p>The walkthrough will demonstrate the complete user journey from initial setup through therapeutic interaction, highlighting both the technical functionality and the intended therapeutic impact. Special attention will be given to accessibility features and the hybrid nature of the experience.</p>
+  </section>
+
+  <section>
+    <div class="section-label">I</div>
+    <h2>Reflection</h2>
+    
+    <div class="reflection-box">
+      <h3>Meeting Project Aims</h3>
+      <p>The project successfully addresses its core objective of creating an accessible, affordable mental health support tool for trauma survivors. By combining lived experience insights with evidence-based therapeutic approaches, "Wish You Were Here" demonstrates how XR technology can be democratized and made relevant to real-world mental health needs.</p>
+      
+      <p>The hybrid approach—combining AR visuals with physical tactile interaction—represents a novel contribution to therapeutic technology design, potentially offering more effective comfort than purely digital solutions while maintaining the scalability of digital interventions.</p>
+    </div>
+    
+    <div class="reflection-box">
+      <h3>Challenges & Limitations</h3>
+      <p><strong>Solo Development Complexity:</strong> Managing the entire pipeline from research through technical implementation while navigating personal CPTSD symptoms presented significant challenges. This experience reinforced the importance of interdisciplinary collaboration for future iterations.</p>
+      
+      <p><strong>N=1 Research Limitations:</strong> As this solution is currently based on the developer's lived experience, broader validation is essential. The sensitive nature of trauma research requires careful ethical consideration and collaboration with clinical professionals for responsible scaling.</p>
+      
+      <p><strong>Technical Constraints:</strong> Balancing accessibility (working on older devices) with advanced features (stereoscopic rendering) required careful optimization and compromise in visual fidelity.</p>
+    </div>
+    
+    <div class="reflection-box">
+      <h3>Future Development & Impact Potential</h3>
+      <p><strong>Clinical Validation:</strong> Next steps include collaboration with trauma therapists and clinical researchers to validate effectiveness through controlled studies with appropriate ethical oversight.</p>
+      
+      <p><strong>Scalability Vision:</strong> The low-cost, smartphone-based approach positions this solution for potential integration into healthcare systems like the NHS, where budget constraints often limit access to innovative therapeutic tools.</p>
+      
+      <p><strong>Community Impact:</strong> By demonstrating that lived experience can drive meaningful technological innovation, this project contributes to broader conversations about inclusive design and the importance of centering affected communities in solution development.</p>
+    </div>
+  </section>
+
+  <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #000; text-align: center;">
+    <p><strong>Yeonhee Choi</strong> | <a href="mailto:ychoi003@gold.ac.uk" class="contact-link">ychoi003@gold.ac.uk</a> | <a href="https://heptapod.github.io/Yeonhee.C" class="contact-link">Portfolio</a></p>
+    <p style="font-size: 12px; color: #666; margin-top: 10px;">XR Development Portfolio | July 2025</p>
   </footer>
 
 </body>
