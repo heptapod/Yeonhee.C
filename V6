@@ -1,0 +1,104 @@
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+
+public class BottlePlacer : MonoBehaviour
+{
+    public ARTrackedImageManager manager;
+    public GameObject defaultPrefab; // 기존 bottlePrefab 대신
+    public GameObject smilePrefab;
+
+    private GameObject currentBottle;
+    private ARTrackedImage handMarker;
+    private ARTrackedImage bottleMarker;
+
+    public float switchDistanceThreshold = 0.15f;
+
+    void Awake()
+    {
+        // 자동으로 ARTrackedImageManager 연결 (Inspector에서 비워도 됨)
+        if (manager == null)
+            manager = FindFirstObjectByType<ARTrackedImageManager>();
+    }
+
+    void OnEnable()
+    {
+        manager.trackablesChanged.AddListener(OnTrackedImagesChanged);
+    }
+
+    void OnDisable()
+    {
+        manager.trackablesChanged.RemoveListener(OnTrackedImagesChanged);
+    }
+
+    void OnTrackedImagesChanged(ARTrackablesChangedEventArgs<ARTrackedImage> args)
+    {
+        foreach (var added in args.added)
+        {
+            if (added.referenceImage.name == "marker_2")
+            {
+                bottleMarker = added;
+
+                if (currentBottle == null)
+                {
+                    Vector3 spawnPosition = added.transform.position;
+                    Quaternion spawnRotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+                    currentBottle = Instantiate(defaultPrefab, spawnPosition, spawnRotation);
+                    currentBottle.transform.localScale = Vector3.one * 0.1f; // 크기 10%로 조정
+
+                    Debug.Log("📦 Default bottle placed.");
+                }
+            }
+            else if (added.referenceImage.name == "marker_1")
+            {
+                handMarker = added;
+            }
+        }
+
+        foreach (var updated in args.updated)
+        {
+            if (updated.referenceImage.name == "marker_1")
+                handMarker = updated;
+
+            if (updated.referenceImage.name == "marker_2")
+                bottleMarker = updated;
+        }
+
+        UpdateBottleState();
+    }
+
+    void UpdateBottleState()
+    {
+        if (bottleMarker == null || handMarker == null || currentBottle == null) return;
+
+        float distance = Vector3.Distance(bottleMarker.transform.position, handMarker.transform.position);
+
+        if (distance <= switchDistanceThreshold)
+        {
+            if (!currentBottle.name.Contains("Smile"))
+            {
+                ReplaceBottle(smilePrefab);
+                Debug.Log("😊 Smile prefab activated.");
+            }
+        }
+        else
+        {
+            if (!currentBottle.name.Contains("Default"))
+            {
+                ReplaceBottle(defaultPrefab);
+                Debug.Log("😐 Default prefab restored.");
+            }
+        }
+    }
+
+    void ReplaceBottle(GameObject newPrefab)
+    {
+        if (currentBottle != null)
+            Destroy(currentBottle);
+
+        Vector3 position = bottleMarker.transform.position;
+        Quaternion rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+
+        currentBottle = Instantiate(newPrefab, position, rotation);
+        currentBottle.transform.localScale = Vector3.one * 0.1f; // 크기 10%로 조정
+    }
+}
