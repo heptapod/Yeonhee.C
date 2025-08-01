@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #000; text-align: center;">
+    <p><strong>Yeonhee Choi</strong> | <a href="mailto:ychoi003@gold.ac.uk" style="color: #000; text-decoration: underline;">ychoi003@gold.ac.uk</a></p>
+    <p style="font-size: 12px; color: #666; margin-top: 10px;">XR Development Portfolio | July 2025</p>
+  </footer>
+
+</body>
+</html><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -89,6 +95,7 @@
       align-items: center;
       justify-content: center;
       font-size: 2em;
+      object-fit: cover;
     }
     
     .face-icon.neutral { background-color: #f5f5f5; }
@@ -216,28 +223,6 @@
       font-size: 0.9em;
     }
     
-    /* Video container */
-    .video-container {
-      margin: 30px 0;
-    }
-    
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-    
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 2px solid #000;
-    }
-    
     /* Code blocks */
     .code-snippet {
       background-color: #f5f5f5;
@@ -315,15 +300,14 @@
   <header>
     <h1>Wish You Were Here: Invisible Emergencies</h1>
     <p><strong>An Accessible and Affordable XR Emergency Aid for (C)PTSD, ASD, and other Mental and Sensory Crises</strong></p>
-    <p>Yeonhee Choi | Individual XR Project | July 2025</p>
+    <p><strong>Yeonhee Choi</strong> | Individual XR Project | July 2025</p>
   </header>
 
   <section>
-    <div class="section-label">A</div>
     <h2>Personal Introduction & Project Overview</h2>
     
     <h3>About</h3>
-    <p>Yeonhee Choi is a designer, researcher, and developer of this project which is deeply rooted in her firsthand experiences during COVID-19 in London, where she was suffering from intersectional vulnerability of (C)PTSD and ASD. It was painful as a person, but was an opportunity to discover critical gaps in conventional healthcare system and theraputic XR tools and insights to reimagine then through longitudinal research as a researcher.</p>
+    <p>Yeonhee Choi is a designer, researcher, and developer of this project which is deeply rooted in my firsthand experiences during COVID-19 in London, where I was suffering from intersectional vulnerability of (C)PTSD and ASD. It was painful as a person, but was an opportunity as a researcher to discover the critical gaps and insights to reimagine it through longitudinal research.</p>
     
     <h3>Skillset</h3>
     <p>Qualitative and Quantitative Research, Trauma-Informed Design, Participatory Design Research, Unity Development (C#), Physical Computing, Digital Fabrication, Tangible Interaction Design, Project Management longitudinal and cross-sectional study</p>
@@ -337,7 +321,6 @@
   </section>
 
   <section>
-    <div class="section-label">B</div>
     <h2>Background & Research Foundation</h2>
     
     <h3>Project Timeline & Evolution</h3>
@@ -351,6 +334,13 @@
         <div class="timeline-year">2019 - 2021 London: Sylvia's module. Early Concept</div>
         <p>Even though I was deferred some of my modules with the hope of getting better, but unfortunately, COVID 19 pandemic outbreak and my health got even worse due to its implications and lockdowns. I ended up having to interrupt my study coming back to Seoul to fully focus on recovery.</p>
         <p>This is an 8 minute VR experience where a user can interact with Virtual Dog from beginning.</p>
+        
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="images/early_vr_concept.jpg" alt="Early VR concept from Sylvia's module" style="max-width: 100%; width: 400px; border: 1px solid #ddd;">
+          <p style="font-style: italic; margin-top: 10px; font-size: 0.9em; color: #666;">
+            <strong>Early VR Concept:</strong> 8-minute virtual dog interaction experience from Sylvia's module
+          </p>
+        </div>
       </div>
       
       <div class="timeline-item">
@@ -380,7 +370,6 @@
   </section>
 
   <section>
-    <div class="section-label">C</div>
     <h2>Target Users & Market Analysis</h2>
     
     <h3>Target User Demographics</h3>
@@ -441,25 +430,39 @@
   </section>
 
   <section>
-    <div class="section-label">D</div>
     <h2>Technical Implementation</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0;">
+      <div style="text-align: center;">
+        <img src="images/hardware_wish_you_were_here.jpeg" alt="Hardware components" style="width: 100%; max-width: 400px; border: 1px solid #ddd;">
+        <p style="font-style: italic; margin-top: 10px; font-size: 0.9em; color: #666;">
+          <strong>Hardware Setup:</strong> Modified Google Cardboard viewer, heated water bottle (Fashy), and custom AR markers
+        </p>
+      </div>
+      <div style="text-align: center;">
+        <img src="images/dual_marker_closeup.jpg" alt="Dual marker closeup showing hand and bottle markers" style="width: 100%; max-width: 400px; border: 1px solid #ddd;">
+        <p style="font-style: italic; margin-top: 10px; font-size: 0.9em; color: #666;">
+          <strong>Dual Marker System:</strong> Close-up view of hand and bottle markers used for AR tracking
+        </p>
+      </div>
+    </div>
     
     <h3>Hand Interaction with Augmented Face Expressions</h3>
     <p>Two physical paper markers are attached to user's hand and the front center of the water bottle. The interaction system triggers 3 different 2D face expressions based on the relationship of the hand and bottle marker position.</p>
     
     <div class="face-expressions-grid">
       <div class="expression-item">
-        <div class="face-icon neutral">-_-</div>
+        <img src="images/face_default.png" alt="Default expression" class="face-icon neutral">
         <h4>1. Default</h4>
         <p>(If user's hand is not touching the bottle)</p>
       </div>
       <div class="expression-item">
-        <div class="face-icon small-smile">^_^</div>
+        <img src="images/face_small_smile.png" alt="Small smile expression" class="face-icon small-smile">
         <h4>2. Small Smile</h4>
         <p>If user's hand is touching the bottle</p>
       </div>
       <div class="expression-item">
-        <div class="face-icon big-smile">^o^</div>
+        <img src="images/face_big_smile.png" alt="Big smile expression" class="face-icon big-smile">
         <h4>3. Big Smile Ending</h4>
         <p>If cumulative hand interaction exceeds 20 seconds within 1 minute</p>
       </div>
@@ -489,7 +492,6 @@ Vector3 position = bottleMarker.transform.position + cameraDirection * 0.5f;
   </section>
 
   <section>
-    <div class="section-label">E</div>
     <h2>User Experience Design</h2>
     
     <h3>User Journey Steps</h3>
@@ -574,7 +576,6 @@ Vector3 position = bottleMarker.transform.position + cameraDirection * 0.5f;
   </section>
 
   <section>
-    <div class="section-label">F</div>
     <h2>Development Process</h2>
     
     <h3>Development Stages</h3>
@@ -609,38 +610,30 @@ Vector3 position = bottleMarker.transform.position + cameraDirection * 0.5f;
   </section>
 
   <section>
-    <div class="section-label">G</div>
     <h2>Walkthrough Videos</h2>
     
-    <div class="video-container">
-      <h3>Application Walkthrough</h3>
-      <div style="border: 2px solid #000; padding: 30px; text-align: center; margin: 20px 0;">
-        <p style="font-size: 1.2em; margin-bottom: 20px;"><strong>📹 Video: Application Walkthrough</strong></p>
-        <p>Complete demonstration of setup, interaction, and user experience highlighting both the technical functionality and the intended therapeutic impact.</p>
-        <p style="margin-top: 20px;">
-          <a href="https://youtu.be/G-Ta-fwP4GY" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">
-            ▶ Watch on YouTube: https://youtu.be/G-Ta-fwP4GY
-          </a>
-        </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0;">
+      <div style="border: 2px solid #000; padding: 20px; text-align: center;">
+        <a href="https://youtu.be/G-Ta-fwP4GY" target="_blank" style="color: #000; text-decoration: none;">
+          <div style="width: 100%; height: 200px; background-color: #f0f0f0; border: 1px solid #000; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+            <span style="font-size: 3em;">▶</span>
+          </div>
+          <p style="font-weight: bold; margin: 0;">User Experience Overview</p>
+        </a>
       </div>
-    </div>
-    
-    <div class="video-container">
-      <h3>Technical Implementation Demo</h3>
-      <div style="border: 2px solid #000; padding: 30px; text-align: center; margin: 20px 0;">
-        <p style="font-size: 1.2em; margin-bottom: 20px;"><strong>📹 Video: Technical Demo</strong></p>
-        <p>Technical demonstration showing AR marker tracking, face expression transitions, and interaction mechanics in detail.</p>
-        <p style="margin-top: 20px;">
-          <a href="https://youtu.be/t8xn-IyQD08" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">
-            ▶ Watch on YouTube: https://youtu.be/t8xn-IyQD08
-          </a>
-        </p>
+      
+      <div style="border: 2px solid #000; padding: 20px; text-align: center;">
+        <a href="https://youtu.be/t8xn-IyQD08" target="_blank" style="color: #000; text-decoration: none;">
+          <div style="width: 100%; height: 200px; background-color: #f0f0f0; border: 1px solid #000; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+            <span style="font-size: 3em;">▶</span>
+          </div>
+          <p style="font-weight: bold; margin: 0;">First-Person AR View</p>
+        </a>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="section-label">H</div>
     <h2>Reflection & Future Work</h2>
     
     <div class="reflection-box">
@@ -661,12 +654,4 @@ Vector3 position = bottleMarker.transform.position + cameraDirection * 0.5f;
       
       <p><strong>Community Impact:</strong> By demonstrating that lived experience can drive meaningful technological innovation, this project contributes to broader conversations about inclusive design and the importance of centering affected communities in solution development.</p>
     </div>
-  </section>
-
-  <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #000; text-align: center;">
-    <p><strong>Yeonhee Choi</strong> | <a href="mailto:ychoi003@gold.ac.uk" style="color: #000; text-decoration: underline;">ychoi003@gold.ac.uk</a></p>
-    <p style="font-size: 12px; color: #666; margin-top: 10px;">XR Development Portfolio | July 2025</p>
-  </footer>
-
-</body>
-</html>
+  </section
