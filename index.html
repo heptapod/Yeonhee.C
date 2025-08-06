@@ -13,14 +13,315 @@
   </header>
 -->
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Wish You Were Here XR</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      margin: 0;
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      border-bottom: 3px solid #000;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .section-label {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .project-overview {
+      background-color: #f9f9f9;
+      padding: 30px;
+      margin: 30px 0;
+      border-left: 5px solid #000;
+    }
+
+    /* Face Expressions Grid */
+    .face-expressions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .expression-item {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #000;
+    }
+
+    .face-icon {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #000;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+    }
+
+    .face-icon.neutral { background-color: #f5f5f5; }
+    .face-icon.small-smile { background-color: #e8e8e8; }
+    .face-icon.big-smile { background-color: #d0d0d0; }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      font-size: 0.9em;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid #000;
+      padding: 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .comparison-table th {
+      background-color: #000;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* User Journey Steps */
+    .user-journey {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .journey-step {
+      padding: 20px;
+      border: 1px solid #000;
+    }
+
+    .step-number {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin: 30px 0;
+    }
+
+    .timeline-item {
+      margin-bottom: 40px;
+      padding-left: 30px;
+      border-left: 3px solid #000;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+      left: -8px;
+      top: 5px;
+    }
+
+    .timeline-year {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    /* Development Stages */
+    .dev-stages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .stage-box {
+      border: 2px solid #000;
+      padding: 20px;
+    }
+
+    .stage-number {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .stage-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .stage-description {
+      font-size: 0.9em;
+    }
+
+    /* Video container */
+    .video-container {
+      margin: 30px 0;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #000;
+    }
+
+    /* Code blocks */
+    .code-snippet {
+      background-color: #f5f5f5;
+      padding: 15px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      border-left: 3px solid #000;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    /* Research citations */
+    .research-citation {
+      font-style: italic;
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #fafafa;
+    }
+
+    /* Reflection boxes */
+    .reflection-box {
+      background-color: #f0f0f0;
+      padding: 30px;
+      margin: 30px 0;
+      border: 2px solid #000;
+    }
+
+    .reflection-box h3 {
+      margin-top: 0;
+      text-decoration: none;
+    }
+
+    /* Lists */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .feature-list li:before {
+      content: "• ";
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-top: 40px;
+      }
+
+      .face-expressions-grid,
+      .user-journey,
+      .dev-stages {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body>
 
   <header>
   <h1>Wish You Were Here XR: Invisible Emergencies</h1>
