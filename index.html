@@ -3,6 +3,21 @@
     <p><strong>Yeonhee Choi</strong> | <a href="mailto:ychoi003@gold.ac.uk" style="color: #000; text-decoration: underline;">ychoi003@gold.ac.uk</a></p>
     <p style="font-size: 12px; color: #666; margin-top: 10px;">XR Development Portfolio | July 2025</p>
   </footer>
+
+  <!-- Copy / Paste / Context menu guard -->
+  <script>
+    (function(){
+      const block = (e) => { e.preventDefault(); return false; };
+      ['copy','cut','paste','contextmenu','dragstart'].forEach(evt => document.addEventListener(evt, block, {passive:false}));
+      // Block common keyboard shortcuts (Cmd/Ctrl + C/X/V/S/P/A/U)
+      document.addEventListener('keydown', function(e){
+        const key = (e.key || '').toLowerCase();
+        if ((e.ctrlKey || e.metaKey) && ['c','x','v','s','p','a','u'].includes(key)) {
+          e.preventDefault();
+        }
+      }, {passive:false});
+    })();
+  </script>
 -->
 
 <!--
@@ -11,6 +26,9 @@
     <p><strong>Accessible and Affordable XR Emergency Aid for symptoms of (C)PTSD, ASD, and other Mental and Sensory Crisis</strong></p>
     <p><strong>Yeonhee Choi</strong> | Individual XR Project | Published in July 2025</p>
   </header>
+
+  <!-- Sticky copyright ribbon: stays visible while scrolling -->
+  <div class="sticky-copyright">© Yeonhee Choi, 2025. All rights reserved.</div>
 -->
 
 <head>
@@ -283,6 +301,16 @@
       margin-right: 10px;
     }
 
+    /* Footer */
+    .site-footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #000;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+
     @media (max-width: 768px) {
       body {
         padding: 20px 15px;
@@ -303,6 +331,29 @@
         grid-template-columns: 1fr;
       }
     }
+  /* Sticky copyright ribbon */
+    .sticky-copyright {
+      position: fixed;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: center;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid #000;
+      padding: 6px 10px;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      z-index: 9999;
+      pointer-events: none; /* don't block clicks */
+    }
+
+    /* Disable text selection site-wide */
+    html, body, * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
   </style>
 </head>
 
@@ -318,6 +369,9 @@
    <p><strong>- Immediate 'Contact Comfort' through tactile interaction, enhanced by augmented 2D facial expressions designed to activate mirror neuron responses</strong></p>
   
 </header>
+
+  <!-- Sticky copyright ribbon: stays visible while scrolling -->
+  <div class="sticky-copyright">© Yeonhee Choi, 2025. All rights reserved.</div>
 
   <section>
     <h2>Personal Introduction & Project Overview</h2>
@@ -702,4 +756,21 @@ Vector3 position = bottleMarker.transform.position + cameraDirection * 0.5f;
       
       <p><strong>Community Impact:</strong> By demonstrating that lived experience can drive meaningful technological innovation, I believe this project contributes to broader conversations about inclusive design and the importance of centering affected communities in solution development.</p>
     </div>
-  </section
+  </section>
+
+  <script>
+ (function(){
+   const block = (e) => { e.preventDefault(); return false; };
+   ['copy','cut','paste','contextmenu','dragstart'].forEach(evt => document.addEventListener(evt, block, {passive:false}));
+   document.addEventListener('keydown', function(e){
+     const key = (e.key || '').toLowerCase();
+     if ((e.ctrlKey || e.metaKey) && ['c','x','v','s','p','a','u'].includes(key)) {
+       e.preventDefault();
+     }
+   }, {passive:false});
+ })();
+</script>
+
+  <footer class="site-footer">
+    <p>© Yeonhee Choi, 2025. All rights reserved.</p>
+  </footer>
